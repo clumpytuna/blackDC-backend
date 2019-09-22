@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf.urls import url
+
+from .views import get_one_well
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^get_one$', get_one_well)
 ]
